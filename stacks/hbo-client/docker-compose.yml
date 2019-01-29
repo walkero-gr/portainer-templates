@@ -16,7 +16,7 @@ services:
       PHP_XDEBUG_REMOTE_HOST: "docker.for.mac.localhost" #10.126.5.83 # macOS
 #      PHP_XDEBUG_REMOTE_HOST: 10.0.75.1 # Windows
     volumes:
-      - ./public_html:/var/www/html
+      - ${PROJECT_BASE_FOLDER}/public_html:/var/www/html
       - ~/.ssh:/home/wodby/.ssh
 ## For macOS users
 #      - ./public_html:/var/www/html:cached # User-guided caching
@@ -37,7 +37,7 @@ services:
       NGINX_SERVER_ROOT: /var/www/html/public/site
       NGINX_VHOST_PRESET: wordpress
     volumes:
-      - ./public_html:/var/www/html
+      - ${PROJECT_BASE_FOLDER}/public_html:/var/www/html
 # For macOS users (https://wodby.com/stacks/drupal/docs/local/docker-for-mac/)
 #      - ./public_html:/var/www/html:cached # User-guided caching
 #      - docker-sync:/var/www/html # Docker-sync
