@@ -17,7 +17,7 @@ services:
 #      PHP_XDEBUG_REMOTE_HOST: 10.0.75.1 # Windows
     volumes:
       - ${PROJECT_BASE_FOLDER}/public_html:/var/www/html
-      - ~/.ssh:/home/wodby/.ssh
+      # - ~/.ssh:/home/wodby/.ssh
 ## For macOS users
 #      - ./public_html:/var/www/html:cached # User-guided caching
 #      - docker-sync:/var/www/html # Docker-sync
